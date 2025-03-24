@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "habit-tracker"
+version = "0.1.0"
+description = ""
+authors = ["Sofia <ssofstep7627@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flake8 = "^7.1.2"
+redis = "^5.2.1"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
