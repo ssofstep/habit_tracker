@@ -29,10 +29,7 @@ class HabitCreateAPIView(generics.CreateAPIView):
     queryset = Habits.objects.all()
 
     def perform_create(self, serializer):
-        habit = serializer.save()
-        habit.user = self.request.user
-        habit = serializer.save()
-        habit.save()
+        habit = serializer.save(user=self.request.user)
         if habit.user.tg_id:
             send_telegram_message(habit.user.tg_id, "Создана новая привычка!")
 
