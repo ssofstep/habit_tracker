@@ -11,7 +11,7 @@ class HabitTestCase(APITestCase):
         self.habit = Habits.objects.create(
             user=self.user,
             place="Дома",
-            time="2023-13-05T14:31:00+03:00",
+            time="2023-10-05T14:31:00+03:00",
             action="Подтянуться 10 раз",
             nice_habit="False",
             periodicity=1,
