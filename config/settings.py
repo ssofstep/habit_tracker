@@ -7,10 +7,10 @@ load_dotenv(override=True)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'os.getenv("SECRET_KEY")'
+SECRET_KEY = 'django-insecure-nnr*h34vua$mqu*(^3&_#n!ru3rv4yx_6nd^@_d!^3v%spn&sv'
 
 
-DEBUG = True if os.getenv("DEBUG") == "True" else False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -65,11 +65,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'NAME': 'habit_tracker',
+        'USER': 'postgres',
+        'PASSWORD': '7627',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -146,9 +146,9 @@ CELERY_BEAT_SCHEDULE = {
     },
 }
 
-TELEGRAM_URL = os.getenv('TELEGRAM_URL')
+TELEGRAM_URL = 'https://api.telegram.org/bot'
 
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_BOT_TOKEN = '7457060888:AAFR4UTZz8uNkRRo1h2A7sMbyt_nEUnmV3Q'
 
 CORS_ALLOWED_ORIGINS = [
     "https://read-only.example.com",
