@@ -10,7 +10,7 @@ jobs:
       postgresql:
         image: postgres:13
         env:
-          POSTGRES_DB: spa_web_application
+          POSTGRES_DB: habit_tracker
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 7627
         ports:
