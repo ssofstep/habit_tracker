@@ -6,6 +6,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      postgresql:
+        image: postgres:13
+        env:
+          POSTGRES_DB: spa_web_application
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 7627
+        ports:
+          - 5432:5432
+        options: --health-cmd="pg_isready -U myuser" --health-interval=10s --health-timeout=5s --health-retries=5
+
     steps:
     - name: Check out code
       uses: actions/checkout@v3
