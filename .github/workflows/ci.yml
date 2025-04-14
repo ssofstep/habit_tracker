@@ -63,7 +63,7 @@ jobs:
 
       - name: Copy project files to server
         run: |
-          sync  . ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.DEPLOY_DIR }}
+          rsync  . ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.DEPLOY_DIR }}
 
       - name: Install dependencies on server
         run: |
